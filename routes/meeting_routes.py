@@ -2,20 +2,20 @@ from datetime import datetime, timezone
 
 from fastapi import APIRouter
 
-from backend.db.database import fetch_all_tasks, insert_meeting, insert_tasks, update_task_jira_status
-from backend.models.schemas import (
+from db.database import fetch_all_tasks, insert_meeting, insert_tasks, update_task_jira_status
+from models.schemas import (
     DashboardResponse,
     JiraPushResult,
     ProcessMeetingRequest,
     ProcessMeetingResponse,
     PushToJiraRequest,
 )
-from backend.services.config import settings
-from backend.services.jira_service import JiraServiceError, create_jira_issue
-from backend.services.llm_service import extract_tasks
-from backend.services.nlp_engine import process_transcript
-from backend.services.user_mapping import map_user
-from backend.services.validation import validate_tasks
+from services.config import settings
+from services.jira_service import JiraServiceError, create_jira_issue
+from services.llm_service import extract_tasks
+from services.nlp_engine import process_transcript
+from services.user_mapping import map_user
+from services.validation import validate_tasks
 
 
 router = APIRouter()

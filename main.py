@@ -3,8 +3,8 @@ import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.db.database import init_db
-from backend.routes.meeting_routes import router as meeting_router
+from db.database import init_db
+from routes.meeting_routes import router as meeting_router
 
 
 logging.basicConfig(

@@ -4,7 +4,7 @@ from typing import Any
 
 import mysql.connector
 
-from backend.services.config import settings
+from services.config import settings
 
 
 LOGGER = logging.getLogger(__name__)
