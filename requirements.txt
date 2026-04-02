@@ -1,0 +1,9 @@
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+groq==0.31.0
+requests==2.32.4
+pydantic==2.11.7
+pydantic-settings==2.10.1
+python-dateutil==2.9.0.post0
+python-multipart==0.0.20
+mysql-connector-python==9.3.0
