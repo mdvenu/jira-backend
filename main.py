@@ -29,7 +29,10 @@ app.include_router(meeting_router)
 
 @app.on_event("startup")
 def startup() -> None:
-    init_db()
+    try:
+        init_db()
+    except Exception as e:
+        logging.error(f"Failed to initialize database: {e}")
 
 
 @app.get("/health")
